@@ -19,7 +19,7 @@ const Hero = () => {
         }}
       >
         <div className="bg-black opacity-[0.88] inset-0 h-screen w-screen md:h-[46.25rem]">
-          <div className="absolute z-1 py-5 px-[13rem] w-screen">
+          <div className="absolute z-1 py-5 px-[13rem]">
             <Navbar />
           </div>
 
