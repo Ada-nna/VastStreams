@@ -1,0 +1,11 @@
+@media (max-width: 420px) {
+  .smallScreen {
+    background-color: red;
+  }
+  .logo2 {
+    width: 20%;
+  }
+  .logoText {
+    font-size: 20px;
+  }
+}

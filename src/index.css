@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Satoshi", sans-serif;
+  color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: black;
+}
+
+.logo {
+  font-family: "Panchang", sans-serif;
+}
+
+.nav-lists:hover {
+  background: #282828;
+  transition-duration: 0.5s;
+}
+
+.nav-lists:active {
+  background: #5a5959;
+  transition-duration: 0.5s;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo-abstract {
+    animation: logo-spin 20s linear infinite;
+    transform-origin: center center;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+div {
+  border: 1px solid red;
+}
