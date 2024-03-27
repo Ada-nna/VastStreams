@@ -1,5 +1,5 @@
 import React from "react";
-import LogoAbstract from "../../../assets/hero/logo_movie.png"
+import LogoAbstract from "../../../assets/hero/logo_movie.png";
 
 const HeroImage = () => {
   return (

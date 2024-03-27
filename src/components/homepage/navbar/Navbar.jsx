@@ -15,7 +15,7 @@ const Navbar = () => {
   ));
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex w-scr items-center justify-between">
       <div className="flex items-center gap-2">
         <img src={Logo} alt="logo" className="logo2 w-[4rem]" />
         <h1 className="logo logoText text-[1.5rem] font-bold">VastStreams</h1>
