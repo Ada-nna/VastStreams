@@ -7,7 +7,7 @@ import Button from "./button.jsx";
 
 const Hero = () => {
   return (
-    <div className=" overflow-hidden smallScreen">
+    <div className="overflow-hidden smallScreen">
       <div
         className="relative h-[31.25rem] md:h-[46.25rem] smallScreen2"
         style={{
@@ -15,7 +15,7 @@ const Hero = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          // width: "100vw",
+          width: "100vw",
         }}
       >
         <div className="bg-black opacity-[0.88] inset-0 h-screen w-screen md:h-[46.25rem]">
