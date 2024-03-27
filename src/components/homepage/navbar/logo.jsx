@@ -3,7 +3,7 @@ import LogoAbstract from "../../../assets/hero/logo_movie.png";
 
 const HeroImage = () => {
   return (
-    <div className="pt-[13rem]">
+    <div className="pt-[10rem]">
       <img src={LogoAbstract} className="logo-abstract" />
     </div>
   );

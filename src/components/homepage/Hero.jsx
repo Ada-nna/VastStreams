@@ -17,23 +17,23 @@ const Hero = () => {
         }}
       >
         <div className="bg-black opacity-[0.88] inset-0 w-[100%]">
-          <div className="py-5 px-[13rem]">
-          <Navbar />
+          <div className="py-5 px-[100px]">
+            <Navbar />
           </div>
 
           {/* logo abstract here */}
           <div className="">
             <HeroImage />
           </div>
-          <div className="flex flex-col justify-center place-items-center w-[100%]">
+          <div className="flex flex-col justify-center place-items-center pt-[6.5rem] w-[100%]">
             <h1 className="font-bold text-[58px] text-center">
               The Best Streaming Experience
             </h1>
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center place-items-center p-5 w-[100%]">
-        <p className="text-[18px] w-[60%] text-center text-[#999999]">
+      <div className="flex flex-col justify-center place-items-center w-[100%]">
+        <p className="text-[18px] w-[52%] text-center text-[#999999] ">
           VastStreams is the best streaming experience for watching your
           favorite movies and shows on demand, anytime, anywhere. With
           VastStreams, you can enjoy a wide variety of content, including the
@@ -42,7 +42,28 @@ const Hero = () => {
           content you want to watch.
         </p>
         <div className="mt-5">
-          <Button />
+          <Button
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
+                />
+              </svg>
+            }
+            text="Start Watching Now"
+            backgroundColor="bg-[red]"
+            paddingX="px-3"
+            paddingY="py-3"
+          />
         </div>
       </div>
     </div>
