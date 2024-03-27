@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 * {
   font-family: "Satoshi", sans-serif;
   color: #ffffff;
@@ -46,3 +48,5 @@ body {
     margin: 0 auto;
   }
 }
+
+

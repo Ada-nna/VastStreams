@@ -15,12 +15,12 @@ const Navbar = () => {
   ));
 
   return (
-    <div className="flex w-scr items-center justify-between">
+    <div className="flex w-[100%] items-center justify-between">
       <div className="flex items-center gap-2">
         <img src={Logo} alt="logo" className="logo2 w-[4rem]" />
         <h1 className="logo logoText text-[1.5rem] font-bold">VastStreams</h1>
       </div>
-      <ul className="hidden lg:flex flex-wrap border-[#474747] border-2 rounded-[10px] w-[30rem] text-[17px] justify-between">
+      <ul className="hidden lg:flex border-[#474747] border-2 rounded-[10px]  text-[17px] justify-between">
         {navbarLists}
       </ul>
       <div className="flex space-x-4">

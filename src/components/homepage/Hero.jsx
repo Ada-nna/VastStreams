@@ -1,4 +1,3 @@
-import React from "react";
 import BackgroundImage from "../../assets/hero/movies_bgc.png";
 import Navbar from "./navbar/Navbar";
 // import LogoAbstract from "../../assets/hero/abstract-design.png";
@@ -7,35 +6,34 @@ import Button from "./button.jsx";
 
 const Hero = () => {
   return (
-    <div className="overflow-hidden smallScreen">
+    <div className="smallScreen">
       <div
-        className="relative smallScreen2"
+        className=" w-[100%] smallScreen2"
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          width: "100vw",
         }}
       >
-        <div className="bg-black opacity-[0.88] inset-0 w-screen">
-          <div className="absolute z-1 py-5 px-[13rem] w-screen">
-            <Navbar />
+        <div className="bg-black opacity-[0.88] inset-0 w-[100%]">
+          <div className="py-5 px-[13rem]">
+          <Navbar />
           </div>
 
           {/* logo abstract here */}
           <div className="">
             <HeroImage />
           </div>
-          <div className="flex flex-col justify-center place-items-center">
+          <div className="flex flex-col justify-center place-items-center w-[100%]">
             <h1 className="font-bold text-[58px] text-center">
               The Best Streaming Experience
             </h1>
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center place-items-center p-5">
-        <p className="text-[18px] w-[62rem] text-center text-[#999999]">
+      <div className="flex flex-col justify-center place-items-center p-5 w-[100%]">
+        <p className="text-[18px] w-[60%] text-center text-[#999999]">
           VastStreams is the best streaming experience for watching your
           favorite movies and shows on demand, anytime, anywhere. With
           VastStreams, you can enjoy a wide variety of content, including the
