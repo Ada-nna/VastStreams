@@ -1,6 +1,5 @@
 import BackgroundImage from "../../assets/hero/movies_bgc.png";
 import Navbar from "./navbar/Navbar";
-// import LogoAbstract from "../../assets/hero/abstract-design.png";
 import HeroImage from "./navbar/logo.jsx";
 import Button from "./button.jsx";
 
@@ -33,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center place-items-center w-[100%]">
-        <p className="text-[18px] w-[52%] text-center text-[#999999] ">
+        <p className="text-[18px] w-[54%] text-center font-medium text-[#999999] ">
           VastStreams is the best streaming experience for watching your
           favorite movies and shows on demand, anytime, anywhere. With
           VastStreams, you can enjoy a wide variety of content, including the

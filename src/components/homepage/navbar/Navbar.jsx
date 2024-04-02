@@ -4,7 +4,7 @@ import Lists from "./lists";
 
 export const orderedLists = [
   { text: "Home", path: "/" },
-  { text: "Movies & Shows", path: "/" },
+  { text: "Movies & Shows", path: "/movies" },
   { text: "Support", path: "/" },
   { text: "Subscriptions", path: "/" },
 ];

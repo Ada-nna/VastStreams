@@ -7,7 +7,7 @@ const PlanButton = ({ children, onSelect, isSelected }) => {
         <button
           className={`${
             isSelected ? "active" : ""
-          } border w-[118px] h-[55px] flex items-center justify-center`}
+          } w-[118px] h-[55px] flex items-center justify-center`}
           onClick={onSelect}
         >
           {children}
