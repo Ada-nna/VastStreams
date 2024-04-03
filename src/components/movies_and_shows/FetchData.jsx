@@ -102,7 +102,7 @@ const FetchData = () => {
         {movies.map((movie) => (
           <div
             key={movie.id}
-            className="movie-card border-red-500 border-2"
+            className="movie-card"
           >
             <img
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}

@@ -1,26 +1,14 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SwiperCards from "../homepage/SwiperCards";
-import Action from "../../assets/movie-categories/action.png";
-import Adventure from "../../assets/movie-categories/adventure.png";
-import Comedy from "../../assets/movie-categories/comedy.png";
-import Drama from "../../assets/movie-categories/drama.png";
+import TopAction from "../../assets/movie-categories/action-10.png";
+import TopAdventure from "../../assets/movie-categories/adventure-10.png";
+import TopComedy from "../../assets/movie-categories/comedy-10.png";
+import TopDrama from "../../assets/movie-categories/drama-10.png";
 import Horror from "../../assets/movie-categories/horror.png";
-
-const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYmQxZTE2ZDRhN2U4NDgzZWEwYmU2ZTA4NDU2MjY4NiIsInN1YiI6IjY1ZGUzZmJiNzc3NmYwMDE3YzExZjYyZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hc5uoB1NI7Ugt3HM3x_ZZ80UFN-KWezwRkQuOmK9Zp8'
-  }
-};
-
-fetch('https://api.themoviedb.org/3/account/21037472/favorite/movies?language=en-US&page=1&sort_by=created_at.asc', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+import axios from "axios";
 
 function CustomNextArrow(props) {
   const { style, onClick } = props;
@@ -84,15 +72,14 @@ function CustomPrevArrow(props) {
   );
 }
 
-function MoviesHero() {
+const TopTen = () => {
+  const [movies, setMovies] = useState([]);
+
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
     className: "center",
     infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 5,
     swipeToSlide: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
@@ -101,27 +88,40 @@ function MoviesHero() {
     },
   };
 
+  useEffect(() => {
+    const fetchTopTen = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.themoviedb.org/3/movie/popular?api_key=abd1e16d4a7e8483ea0be6e084562686&language=en-US&page=1"
+        );
+        console.log(response.data);
+        setMovies(response.data.results.slice(0, 10));
+      } catch (error) {
+        console.error("Error fetching top 10 movies:", error);
+      }
+    };
+
+    fetchTopTen();
+  }, []);
+
+  const TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+
   return (
     <div className="slider-container flex px-[100px] mt-[3rem]">
       <Slider {...settings} className=" w-[100%] flex gap-4">
-        <div className="w-[295.4px] h-[52rem] p-3">
-          <SwiperCards image={Action} title="Action" />
-        </div>
-        <div className="w-[295.4px] h-[52rem] p-3">
-          <SwiperCards image={Adventure} title="Adventure" />
-        </div>
-        <div className="w-[295.4px] h-[52rem] p-3">
-          <SwiperCards image={Comedy} title="Comedy" />
-        </div>
-        <div className="w-[295.4px] h-[52rem] p-3">
-          <SwiperCards image={Drama} title="Drama" />
-        </div>
-        <div className="w-[295.4px] h-[52rem] p-3">
-          <SwiperCards image={Horror} title="Horror" />
-        </div>
+        {movies.map((movie) => (
+          <div className="w-[295.4px] h-[342px] p-3" key={movie.id}>
+            {" "}
+            <SwiperCards
+              image={`https://image.tmdb.org/t/p/w500{movie.poster_path}`}
+              title={movie.title}
+              {...movie}
+            />{" "}
+          </div>
+        ))}
       </Slider>
     </div>
   );
-}
+};
 
-export default MoviesHero;
+export default TopTen;

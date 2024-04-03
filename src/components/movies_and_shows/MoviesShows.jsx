@@ -1,15 +1,19 @@
 import React from "react";
-import MoviesHero from "./MoviesHero";
-import FetchData from "./FetchData";
+// import FetchData from "./FetchData";
 import MovHero from "./MovHero";
+import SwipeToSlide from "../homepage/Swiper";
+import TopTen from "./TopTen";
 
 const MoviesShows = () => {
   return (
     <div>
       <div className="">
-        {/* <MoviesHero /> */}
         {/* <FetchData /> */}
         <MovHero />
+        <div className=" border-2 h-[197.75rem]">
+          <SwipeToSlide />
+          <TopTen />
+        </div>
       </div>
     </div>
   );
