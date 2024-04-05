@@ -11,7 +11,7 @@ const Accordion = ({ title, content }) => {
 
   return (
     <div
-      className={`gradient-border-bottom p-5 my-2 w-[49rem] cursor-pointer mx-4 md:mx-0 ${
+      className={`accordion gradient-border-bottom p-5 my-2 w-[10rem] lg:w-[49rem] cursor-pointer md:mx-0 ${
         isOpen ? "bg-opacity-75" : "bg-opacity-100"
       }`}
       onClick={() => setIsOpen(!isOpen)}

@@ -6,7 +6,7 @@ import Accordion from "./Accordion";
 const FAQ = () => {
   return (
     <div>
-      <div className="flex justify-between items-center pb-5 px-[100px] mt-[11rem]">
+      <div className="lg:flex lg:justify-between lg:items-center pb-5 px-[30px] lg:px-[100px] mt-[11rem]">
         <Categories
           title="Frequently Asked Questions"
           details="Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe."
@@ -18,7 +18,7 @@ const FAQ = () => {
           paddingY="py-3"
         />
       </div>
-      <div className="px-[100px] flex justify-between mt-[3rem]">
+      <div className="lg:px-[100px] lg:flex lg:justify-between mt-[3rem]">
         <div>
           <Accordion
             title="What is VastStreams all about?"

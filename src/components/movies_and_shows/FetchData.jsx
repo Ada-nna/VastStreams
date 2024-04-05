@@ -98,12 +98,9 @@ const FetchData = () => {
 
   return (
     <div className="slider-container px-[100px] mt-[3rem] border-yellow-500 border-2">
-      <Slider {...settings} >
+      <Slider {...settings}>
         {movies.map((movie) => (
-          <div
-            key={movie.id}
-            className="movie-card"
-          >
+          <div key={movie.id} className="movie-card border-red-500 border-2">
             <img
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}

@@ -69,7 +69,8 @@ body {
   background-image: linear-gradient(to right, #0f0f0f 30%, red, #0f0f0f);
 }
 
-/* .movie-card img {
-  height: 800px;
-  width: 100%;
-} */
+@media (max-width: 991px) {
+  .accordion {
+    width: 100%;
+  }
+}

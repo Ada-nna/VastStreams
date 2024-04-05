@@ -4,7 +4,7 @@ const DeviceCards = ({ icon, title, details }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
-      className="w-[540px] h-[283px] rounded-[10px] border border-[#353535] p-[3.5rem] flex flex-col justify-between"
+      className="w-[361px] h-[175px] lg:w-[540px] lg:h-[283px] rounded-[10px] border border-[#353535] p-[3.5rem] flex flex-col justify-between"
       style={{
         backgroundImage: `linear-gradient(to top right, #0F0F0F, #0F0F0F ${
           isHovered ? 50 : 60

@@ -1,6 +1,6 @@
-import { Facebook } from "iconsax-react";
-import { Instagram } from "iconsax-react";
-import { Xrp } from "iconsax-react";
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 export const FooterLinks = [
   {
@@ -41,12 +41,24 @@ export const FooterLinks = [
       { text: "Features", link: "./" },
     ],
   },
-  // {
-  //   title: "Connect With Us",
-  //   links: [
-  //     { icon: <Facebook size={24} color="#fff" />, link: "./" },
-  //     { icon: <Instagram size={24} color="#fff" />, link: "./" },
-  //     { icon: <Xrp size={24} color="#fff" />, link: "./" },
-  //   ],
-  // },
+  {
+    title: "Connect With Us",
+    links: [
+      {
+        icon: FaFacebook,
+        style: "text-[1.8rem]",
+        link: "https://web.facebook.com/joyce.okafor.58",
+      },
+      {
+        icon: FaSquareXTwitter,
+        style: "text-[1.8rem]",
+        link: "https://twitter.com/girle_45",
+      },
+      {
+        icon: FaLinkedin,
+        style: "text-[1.8rem]",
+        link: "https://www.linkedin.com/in/ctokafor/",
+      },
+    ],
+  },
 ];

@@ -3,11 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SwiperCards from "../homepage/SwiperCards";
-import TopAction from "../../assets/movie-categories/action-10.png";
-import TopAdventure from "../../assets/movie-categories/adventure-10.png";
-import TopComedy from "../../assets/movie-categories/comedy-10.png";
-import TopDrama from "../../assets/movie-categories/drama-10.png";
-import Horror from "../../assets/movie-categories/horror.png";
+// import TopAction from "../../assets/movie-categories/action-10.png";
+// import TopAdventure from "../../assets/movie-categories/adventure-10.png";
+// import TopComedy from "../../assets/movie-categories/comedy-10.png";
+// import TopDrama from "../../assets/movie-categories/drama-10.png";
+// import Horror from "../../assets/movie-categories/horror.png";
 import axios from "axios";
 
 function CustomNextArrow(props) {
@@ -51,7 +51,7 @@ function CustomPrevArrow(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginRight: "1rem",
+        marginLeft: "1rem",
         cursor: "pointer",
       }}
       onClick={onClick}
@@ -92,31 +92,41 @@ const TopTen = () => {
     const fetchTopTen = async () => {
       try {
         const response = await axios.get(
-          "https://api.themoviedb.org/3/movie/popular?api_key=abd1e16d4a7e8483ea0be6e084562686&language=en-US&page=1"
+          "https://api.themoviedb.org/3/movie/popular?api_key=abd1e16d4a7e8483ea0be6e084562686&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28"
         );
         console.log(response.data);
         setMovies(response.data.results.slice(0, 10));
+        console.log(movies[0]);
       } catch (error) {
-        console.error("Error fetching top 10 movies:", error);
+        console.error("Error fetching top 10 action movies:", error);
       }
     };
 
     fetchTopTen();
   }, []);
 
-  const TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
-
   return (
-    <div className="slider-container flex px-[100px] mt-[3rem]">
-      <Slider {...settings} className=" w-[100%] flex gap-4">
+    <div className="slider-container px-[100px] mt-[3rem]">
+      {/* <Slider {...settings} className=" w-[100%] flex gap-4">
         {movies.map((movie) => (
-          <div className="w-[295.4px] h-[342px] p-3" key={movie.id}>
-            {" "}
-            <SwiperCards
-              image={`https://image.tmdb.org/t/p/w500{movie.poster_path}`}
-              title={movie.title}
-              {...movie}
-            />{" "}
+          <div key={movie.id} className="movie-card">
+            <img
+              src="https://guardian.ng/wp-content/uploads/life/2016/07/monalisa.png"
+              alt={movie.title}
+            />
+
+          </div>
+        ))}
+      </Slider> */}
+
+      <h1>Hello</h1>
+      <Slider {...settings}>
+        {movies.map((movie) => (
+          <div key={movie.id} className="movie-card border-red-500 border-2">
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              alt={movie.title}
+            />
           </div>
         ))}
       </Slider>

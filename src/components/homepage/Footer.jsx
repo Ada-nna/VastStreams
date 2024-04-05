@@ -2,7 +2,6 @@ import React from "react";
 import { FooterLinks } from "./FooterLinks";
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
   return (
     <footer className="bg-[#0F0F0F] mt-[11rem] px-[100px] py-[50px]">
@@ -10,19 +9,33 @@ const Footer = () => {
         {FooterLinks.map((section, index) => (
           <div key={index} className="w-full md:w-auto mb-8 md:mb-0">
             <h3 className="flex text-[20px]">{section.title}</h3>
-            <ul className="list-none space-y-2 mt-3">
-              {section.links.map((link) => (
-                <li key={link.text}>
-                  <Link
-                    className="hover:text-gray-300 text-[#999999] text-[18px]"
-                    to={link.link}
-                  >
-                    {link.text}
-                    {link.icon}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {section.title === "Connect With Us" ? (
+              <ul className="list-none space-y-2 mt-3">
+                {section.links.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      className="hover:text-gray-300 text-[#999999] text-[18px]"
+                      to={link.link}
+                    >
+                      <div>{<link.icon className={link.style} />}</div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <ul className="list-none space-y-2 mt-3">
+                {section.links.map((link) => (
+                  <li key={link.text}>
+                    <Link
+                      className="hover:text-gray-300 text-[#999999] text-[18px]"
+                      to={link.link}
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </div>

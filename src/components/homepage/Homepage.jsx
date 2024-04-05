@@ -11,7 +11,7 @@ const Homepage = () => {
   return (
     <div className="w-[100%]">
       <Hero />
-      <div className="pb-5 px-[100px] mt-[11rem]">
+      <div className="pb-5 px-[30px] lg:px-[100px] mt-[8rem] lg:mt-[11rem]">
         <Categories
           title="Explore our wide variety of categories"
           details="Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new."

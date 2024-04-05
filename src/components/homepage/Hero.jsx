@@ -5,9 +5,9 @@ import Button from "./button.jsx";
 
 const Hero = () => {
   return (
-    <div className="smallScreen">
+    <div className="">
       <div
-        className=" w-[100%] smallScreen2"
+        className=" w-[100%]"
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: "cover",
@@ -16,7 +16,7 @@ const Hero = () => {
         }}
       >
         <div className="bg-black opacity-[0.88] inset-0 w-[100%]">
-          <div className="py-5 px-[100px]">
+          <div className="py-5 px-[30px] lg:px-[100px]">
             <Navbar />
           </div>
 
@@ -25,14 +25,14 @@ const Hero = () => {
             <HeroImage />
           </div>
           <div className="flex flex-col justify-center place-items-center pt-[6.5rem] w-[100%]">
-            <h1 className="font-bold text-[58px] text-center">
+            <h1 className="font-bold text-[38px] md:text-[58px] text-center">
               The Best Streaming Experience
             </h1>
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center place-items-center w-[100%]">
-        <p className="text-[18px] w-[54%] text-center font-medium text-[#999999] ">
+      <div className="flex flex-col justify-center place-items-center w-[100%] px-[30px] lg:px-[100px]">
+        <p className="text-[14px] lg:text-[18px] lg:w-[60%] text-center font-medium text-[#999999] ">
           VastStreams is the best streaming experience for watching your
           favorite movies and shows on demand, anytime, anywhere. With
           VastStreams, you can enjoy a wide variety of content, including the

@@ -11,14 +11,14 @@ import Headset from "../../assets/devices/headset.png";
 const devices = () => {
   return (
     <div>
-      <div className="pb-5 px-[100px] mt-[11rem]">
+      <div className="pb-5 px-[30px] lg:px-[100px] mt-[11rem]">
         <Categories
           title="We provide you streaming experience across various devices"
           details="With VastStreams, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment."
         />
       </div>
 
-      <div className="px-[100px] grid grid-cols-3 gap-y-[30px] mt-[3rem]">
+      <div className="px-[30px] lg:px-[100px] grid lg:grid-cols-3 gap-y-[30px] mt-[3rem]">
         <DeviceCards
           icon={Smartphone}
           title="Smartphones"
