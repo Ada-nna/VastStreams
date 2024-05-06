@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <div className="flex w-[100%] items-center justify-between">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 lg:gap-2">
         <img src={Logo} alt="logo" className="logo2 w-[3rem] lg:w-[4rem]" />
-        <h1 className="logo logoText text-[1.2rem] lg:text-[1.5rem] font-bold">
+        <h1 className="logo logoText text-[0.7rem] lg:text-[1.5rem] font-bold">
           VastStreams
         </h1>
       </div>

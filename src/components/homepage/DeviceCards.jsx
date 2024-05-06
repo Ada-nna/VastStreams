@@ -28,3 +28,17 @@ const DeviceCards = ({ icon, title, details }) => {
 };
 
 export default DeviceCards;
+
+function DeviceCard({ icon, title, content }) {
+  return (
+    <div>
+      <div className="flex">
+        {icon}
+        <h1>{title}</h1>
+      </div>
+      <div>
+        <p>{content}</p>
+      </div>
+    </div>
+  );
+}

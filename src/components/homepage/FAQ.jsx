@@ -11,14 +11,16 @@ const FAQ = () => {
           title="Frequently Asked Questions"
           details="Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe."
         />
-        <Button
-          text="Ask a Question"
-          backgroundColor="bg-[red]"
-          paddingX="px-3"
-          paddingY="py-3"
-        />
+        <div className="mt-4">
+          <Button
+            text="Ask a Question"
+            backgroundColor="bg-[red]"
+            paddingX="px-3"
+            paddingY="py-3"
+          />
+        </div>
       </div>
-      <div className="lg:px-[100px] lg:flex lg:justify-between mt-[3rem]">
+      <div className="lg:px-[100px] lg:flex lg:justify-between mt-3 lg:mt-[3rem]">
         <div>
           <Accordion
             title="What is VastStreams all about?"
